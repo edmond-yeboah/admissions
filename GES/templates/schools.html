@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preview.colorlib.com/theme/stayhome/properties.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Nov 2021 15:41:05 GMT -->
+<head>
+<title>Schools</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="py-1 bg-black top">
+<div class="container">
+<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+<div class="col-lg-12 d-block">
+<div class="row d-flex">
+<div class="col-md pr-4 d-flex topper align-items-center">
+<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+<span class="text">+ 1235 2355 98</span>
+</div>
+{% comment %} <div class="col-md pr-4 d-flex topper align-items-center">
+<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+<span class="text"><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="532a3c2621363e323a3f13363e323a3f7d303c3e">[email&#160;protected]</a></span>
+</div> {% endcomment %}
+{% comment %} <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+<p class="mb-0 register-link"><a href="#" class="mr-3">Sign Up</a><a href="#">Sign In</a></p>
+</div> {% endcomment %}
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+<div class="container">
+<a class="navbar-brand" href="{% url 'home' %}">Stayhome</a>
+<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="oi oi-menu"></span> Menu
+</button>
+<div class="collapse navbar-collapse" id="ftco-nav">
+<ul class="navbar-nav nav ml-auto">
+<li class="nav-item"><a href="{% url 'home' %}" class="nav-link"><span>Home</span></a></li>
+<li class="nav-item"><a href="{% url 'courses' %}" class="nav-link"><span>Courses</span></a></li>
+{% comment %} <li class="nav-item"><a href="{% url 'search' %}" class="nav-link"><span>Search</span></a></li> {% endcomment %}
+{% comment %} <li class="nav-item"><a href="index-2.html#properties-section" class="nav-link"><span>Listing</span></a></li>
+<li class="nav-item"><a href="index-2.html#about-section" class="nav-link"><span>About</span></a></li>
+<li class="nav-item"><a href="index-2.html#workflow-section" class="nav-link"><span>How it works</span></a></li>
+<li class="nav-item"><a href="index-2.html#agent-section" class="nav-link"><span>Agent</span></a></li>
+<li class="nav-item"><a href="index-2.html#blog-section" class="nav-link"><span>Blog</span></a></li>
+<li class="nav-item"><a href="index-2.html#contact-section" class="nav-link"><span>Contact</span></a></li> {% endcomment %}
+</ul>
+</div>
+</div>
+</nav>
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/4.jpg');" data-stellar-background-ratio="0.5">
+<div class="overlay"></div>
+<div class="container">
+<div class="row no-gutters slider-text align-items-end justify-content-start">
+<div class="col-md-9 ftco-animate pb-4">
+<h1 class="mb-3 bread">Schools</h1>
+<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Schools <i class="ion-ios-arrow-forward"></i></span></p>
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-section ftco-properties" id="properties-section">
+<div class="container-fluid px-md-5">
+<div class="row">
+<div class="col-lg-3 pr-lg-4">
+<div class="search-wrap">
+<h3 class="mb-5">Search Schools</h3>
+<form action="" method="POST" class="search-property">
+{% csrf_token %}
+<div class="row">
+<div class="col-md-12 align-items-end ftco-animate">
+<div class="form-group">
+<label for="#">Keyword</label>
+<div class="form-field">
+<div class="icon"><span class="icon-pencil"></span></div>
+<input type="text" class="form-control" placeholder="Keyword" name="keyword" id="keyword">
+</div>
+</div>
+</div>
+{% comment %} <div class="col-md-12 align-items-end ftco-animate">
+<div class="form-group">
+<label for="#">Location</label>
+<div class="form-field">
+<div class="icon"><span class="icon-pencil"></span></div>
+<input type="text" class="form-control" placeholder="City/Locality Name">
+</div>
+</div>
+</div> {% endcomment %}
+<div class="col-md-12 align-items-end ftco-animate">
+<div class="form-group">
+<label for="#">Location</label>
+<div class="form-field">
+<div class="select-wrap">
+<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+<select name="location" id="location" class="form-control">
+<option value="">Region Name</option>
+<option value="Accra">Greater Accra</option>
+<option value="Kumasi">Kumasi</option>
+<option value="Tamale">Tamale</option>
+<option value="Hoehoe">Hoehoe</option>
+<option value="Winneba">Winneba</option>
+<option value="Tarkwa">Tarkwa</option>
+<option value="Cape coast">Cape coast</option>
+<option value="">Volta Region</option>
+<option value="">Upper East Region</option>
+<option value="">Upper West Region</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="row">
+
+<div class="col-md-12 align-self-end ftco-animate">
+<div class="form-group">
+<div class="form-field">
+<input type="submit" value="Search" class="form-control btn btn-primary">
+</div>
+</div>
+</div>
+</div>
+</form>
+{% if clear %}
+<div class="form-field">
+<a href="{% url 'schools' %}"><input type="submit" value="Clear" class=" btn btn-secondary"></a>
+
+</div>
+{% endif %}
+</div>
+</div>
+
+
+<div class="col-lg-9">
+<div class="row">
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/xwork-1.jpg.pagespeed.ic.VjIZ9oO0iS.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+{% if schools %}
+{% for s in schools %}
+<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a
+                href="single.html"
+                class="block-20"
+                style="background-image: url('{{s.image.url}}')"
+              >
+              </a>
+              <div class="text float-right d-block">
+                {% comment %} <div class="d-flex align-items-center pt-2 mb-4 topp">
+                  <div class="one mr-2">
+                    <span class="day">12</span>
+                  </div>
+                  <div class="two">
+                    <span class="yr">2019</span>
+                    <span class="mos">april</span>
+                  </div>
+                </div> {% endcomment %}
+                <h3 class="heading">
+                  <a href="{% url 'school_details' %}?sid={{s.id}}"
+                    >{{s.name}}</a
+                  >
+                </h3>
+                <p>
+                  {{s.desc | truncatechars:100}}
+                </p>
+                <div class="d-flex align-items-center mt-4 meta">
+                  <p class="mb-0">
+                    <a href="{% url 'school_details' %}?sid={{s.id}}" class="btn btn-primary"
+                      >Details
+                      {% comment %} <span class="ion-ios-arrow-round-forward"></span {% endcomment %}
+                    </a>
+                  </p>
+                  {% comment %} <p class="ml-auto mb-0">
+                    <a href="#" class="mr-2">Admin</a>
+                    <a href="#" class="meta-chat"
+                      ><span class="icon-chat"></span> 3</a
+                    >
+                  </p> {% endcomment %}
+                </div>
+              </div>
+            </div>
+          </div>
+{% endfor %}
+{% endif %}
+
+
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-secondary d-flex text-center align-items-center justify-content-center">
+<span>Rent</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120<span>/mo</span></h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/xwork-3.jpg.pagespeed.ic.JZ2JnPe4EQ.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$230,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/xwork-4.jpg.pagespeed.ic.jCEdj1zs4E.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-5.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-secondary d-flex text-center align-items-center justify-content-center">
+<span>Rent</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$50<span>/mo</span></h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-6.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-7.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-8.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+{% comment %} <div class="col-md-6 col-lg-4">
+<div class="properties ftco-animate">
+<div class="img">
+<img src="/static/images/work-9.jpg" class="img-fluid" alt="Colorlib Template">
+</div>
+<div class="desc">
+<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+<span>Sale</span>
+</div>
+<div class="d-flex pt-5">
+<div>
+<h3><a href="properties-single.html">Fatima Subdivision</a></h3>
+</div>
+<div class="pl-md-4">
+<h4 class="price">$120,000</h4>
+</div>
+</div>
+<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+</div>
+</div>
+</div> {% endcomment %}
+
+
+</div>
+<div class="row mt-5">
+<div class="col text-center">
+<div class="block-27">
+<ul>
+{% if schools.has_previous %}
+<li><a href="?page=1">1</a></li>
+<li><a href="?page={{ schools.previous_page_number }}">&lt;</a></li>
+{% endif %}
+<li class="active"><span>{{schools.number}}/{{schools.paginator.num_pages}}</span></li>
+{% if schools.has_next %}
+<li><a href="?page={{ schools.next_page_number }}">&gt;</a></li>
+<li><a href="?page={{schools.paginator.num_pages}}">{{schools.paginator.num_pages}}</a></li>
+{% endif %}
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<footer class="ftco-footer ftco-section">
+<div class="container-fluid px-md-5">
+{% comment %} <div class="row mb-5">
+<div class="col-md">
+<div class="ftco-footer-widget mb-4">
+<h2 class="ftco-heading-2">Stayhome</h2>
+<p>Far far away, behind the word mountains, far from the countries.</p>
+<ul class="ftco-footer-social list-unstyled mt-5">
+<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md">
+<div class="ftco-footer-widget mb-4 ml-md-4">
+<h2 class="ftco-heading-2">Community</h2>
+<ul class="list-unstyled">
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>For Agents</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md">
+<div class="ftco-footer-widget mb-4 ml-md-4">
+<h2 class="ftco-heading-2">About Us</h2>
+<ul class="list-unstyled">
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md">
+<div class="ftco-footer-widget mb-4">
+<h2 class="ftco-heading-2">Company</h2>
+<ul class="list-unstyled">
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About Us</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Press</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md">
+<div class="ftco-footer-widget mb-4">
+<h2 class="ftco-heading-2">Have a Questions?</h2>
+<div class="block-23 mb-3">
+<ul>
+<li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+<li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text"><span class="__cf_email__" data-cfemail="aac3c4ccc5ead3c5dfd8cec5c7cbc3c484c9c5c7">[email&#160;protected]</span></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div> {% endcomment %}
+<div class="row">
+<div class="col-md-12 text-center">
+<p>
+Copyright &copy;<script data-cfasync="false" src="static/js/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js.pagespeed.jc.DmtixuYRnW.js"></script><script>eval(mod_pagespeed_cOWXp02HjA);</script>
+<script>eval(mod_pagespeed_umjVLgMiVJ);</script>
+<script>eval(mod_pagespeed_EBc7gt9g_1);</script>
+<script src="/static/js/jquery.easing.1.3.js%2bjquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js.pagespeed.jc.SE-H8E-LEe.js"></script><script>eval(mod_pagespeed_4afIGt$vg9);</script>
+<script>eval(mod_pagespeed_GuH7ka2tVJ);</script>
+<script>eval(mod_pagespeed_SbZVCV0$3D);</script>
+<script>eval(mod_pagespeed_zwkB6U1pxx);</script>
+<script src="/static/js/jquery.magnific-popup.min.js%2baos.js%2bjquery.animateNumber.min.js%2bscrollax.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.bK8hq4m6TS.js"></script><script>eval(mod_pagespeed_LD_1_gEmAh);</script>
+<script>eval(mod_pagespeed_dapZgLGwZi);</script>
+<script>eval(mod_pagespeed_SGPSpiT5HD);</script>
+<script>eval(mod_pagespeed_Q1mDRvD_OS);</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_bRn75BLCWT);</script>
+<script>eval(mod_pagespeed_829ARKmHTT);</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b4c74e71b5b6b36","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.11.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
