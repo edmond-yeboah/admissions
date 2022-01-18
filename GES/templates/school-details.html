@@ -3,7 +3,7 @@
 
 <!-- Mirrored from preview.colorlib.com/theme/stayhome/properties-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Nov 2021 15:41:10 GMT -->
 <head>
-<title>Stayhome - Free Bootstrap 4 Template by Colorlib</title>
+<title>Stayhome</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -124,16 +124,38 @@
 <td></td>
 </tr> {% endcomment %}
 
-{% if deg %}
+
 <tr>
 <th scope="row">Degree Programs</th>
-<td class="d-flex">
+<td>
+{% if deg1 %}
+{% for d in deg1 %}
+<ul>
+<a href="{% url 'course_details' %}?cid={{d.id}}"><li>{{d.name}}</li></a>
+{% comment %} <li>Roofing New</li> {% endcomment %}
+</ul>
+{% endfor %}
+{% endif %}
+</td>
+<td>
+{% if deg2 %}
+{% for d in deg2 %}
+<ul>
+<a href="{% url 'course_details' %}?cid={{d.id}}"><li>{{d.name}}</li></a>
+{% comment %} <li>Roofing New</li> {% endcomment %}
+</ul>
+{% endfor %}
+{% endif %}
+</td>
+<td>
+{% if deg %}
 {% for d in deg %}
 <ul>
 <a href="{% url 'course_details' %}?cid={{d.id}}"><li>{{d.name}}</li></a>
 {% comment %} <li>Roofing New</li> {% endcomment %}
 </ul>
 {% endfor %}
+{% endif %}
 {% comment %} <ul>
 <li>Free Taxes</li>
 <li>Agent</li>
@@ -142,12 +164,12 @@
 <td></td>
 <td></td><td></td>
 </tr>
-{% endif %}
+
 
 {% if hnd %}
 <tr>
 <th scope="row">HND Programs</th>
-<td class="d-flex">
+<td >
 {% for h in hnd %}
 <ul>
 <a href="{% url 'course_details' %}?cid={{h.id}}"><li>{{h.name}}</li></a>
@@ -164,7 +186,7 @@
 {% if dip %}
 <tr>
 <th scope="row">Diploma Programs</th>
-<td class="d-flex">
+<td >
 {% for d in dip %}
 <ul>
 <a href="{% url 'course_details' %}?cid={{d.id}}"><li>{{d.name}}</li></a>
@@ -177,6 +199,7 @@
 <td></td>
 </tr>
 {% endif %}
+
 {% comment %} <tr>
 <th scope="row">Maps</th>
 <td>

@@ -68,7 +68,7 @@ def courses(request):
         all_results = degree_results.union(hnd_results).union(dip_results)
         
         if len(all_results)>0:
-            paginator = Paginator(all_results,3)
+            paginator = Paginator(all_results,6)
             page_number = request.GET.get('page')
             context["courses"] = paginator.get_page(page_number)
             context["clear"] = "clear"
@@ -83,7 +83,7 @@ def courses(request):
         
         all_courses = degree.union(hnd).union(dip)
         
-        paginator = Paginator(all_courses,3)
+        paginator = Paginator(all_courses,6)
         page_number = request.GET.get('page')
         context["courses"] = paginator.get_page(page_number)
         
@@ -163,8 +163,20 @@ def school_details(request):
         
         #getting school's degree programs
         deg = degree_programs.objects.filter(school=sch)
+        print(len(deg))
         if len(deg)>0:
-            context["deg"] = deg
+            if len(deg)==9:
+                context["deg"] = degree_programs.objects.filter(school=sch)[:3]
+                context["deg1"] = degree_programs.objects.filter(school=sch)[3:6]
+                context["deg2"] = degree_programs.objects.filter(school=sch)[6:9]
+                
+            elif len(deg)==6:
+                context["deg"] = degree_programs.objects.filter(school=sch)[:3]
+                context["deg1"] = degree_programs.objects.filter(school=sch)[3:6]
+            elif len(deg)==3:
+                context["deg"] = degree_programs.objects.filter(school=sch)[:3]
+            else:
+                context["deg"] = deg
         else:
             pass
         
